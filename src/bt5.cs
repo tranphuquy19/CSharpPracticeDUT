@@ -1,14 +1,24 @@
 using System;
 
 class MainClass {
-  // Bài 1 (2nd)
+  // Bài 5
+  public static float max(float a, float b, float c) {
+    return (a > b && a > c) ? a : (b > a && b > c) ? b : c;
+  }
+
   public static void Main (string[] args) {
-    Console.Write("Nhập số nguyên: ");
-    int n = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Nhập a: ");
+    float a = Convert.ToSingle(Console.ReadLine());
 
-    String result = n % 2 == 0 ? "Số chẵn" : "Số lẻ";
+    Console.Write("Nhập b: ");
+    float b = Convert.ToSingle(Console.ReadLine());
 
-    Console.WriteLine(result);
+    Console.Write("Nhập c: ");
+    float c = Convert.ToSingle(Console.ReadLine());
+
+    float result = max(a, b, c);
+
+    Console.WriteLine("Số lớn nhất: {0}", result);
 
     Console.ReadKey();
   }

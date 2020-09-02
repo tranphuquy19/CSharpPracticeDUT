@@ -1,11 +1,7 @@
 using System;
 
 class MainClass {
-  // Bài 5
-  public static float max(float a, float b, float c) {
-    return (a > b && a > c) ? a : (b > a && b > c) ? b : c;
-  }
-
+  // Bài 3 (2nd)
   public static void Main (string[] args) {
     Console.Write("Nhập a: ");
     float a = Convert.ToSingle(Console.ReadLine());
@@ -16,9 +12,11 @@ class MainClass {
     Console.Write("Nhập c: ");
     float c = Convert.ToSingle(Console.ReadLine());
 
-    float result = max(a, b, c);
+    bool result = (((a + b) > c) && ((b + c) > a) && ((c + a) > b));
 
-    Console.WriteLine("Số lớn nhất: {0}", result);
+    String _result = result ? "" : "không phải ";
+
+    Console.WriteLine("a = {0}, b = {1}, c = {2} {3}là ba cạnh của tam giác", a, b, c, _result);
 
     Console.ReadKey();
   }
