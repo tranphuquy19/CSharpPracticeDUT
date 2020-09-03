@@ -3,7 +3,9 @@
 Đề: [link](https://github.com/tranphuquy19/CSharpPracticeDUT/blob/master/README.pdf)
 
 Tên: Trần Phú Quy
+
 Lớp: 16TCLC3
+
 MSSV: 102160258
 
 ## Run code online:
