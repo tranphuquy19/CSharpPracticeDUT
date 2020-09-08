@@ -21,5 +21,5 @@ mcs -out:build/main.exe src/<tên file>.cs # mono compiler
 ### Run code:
 
 ```bash
-mono build/main.cs
+mono build/main.exe
 ```
