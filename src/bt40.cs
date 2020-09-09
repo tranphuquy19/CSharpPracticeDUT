@@ -14,7 +14,15 @@ class Program {
   }
 
   static void Main(string[] args) {
-    int[] numbers = {1,6,67,23,7,23};
+    Console.Write("[?]Số lượng phần tử: ");
+    int n = Convert.ToInt32(Console.ReadLine());
+    int[] numbers = new int[n];
+
+    for (int i = 0; i < arr.Length; i++) {
+      Console.Write("Arr[{0}]: ", i);
+      numbers[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    
     sort(numbers);
     Console.WriteLine("Mảng sau khi sort: ");
     foreach(int number in numbers) {

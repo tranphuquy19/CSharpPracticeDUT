@@ -9,7 +9,15 @@ class Program {
     return total;
   }
   static void Main(string[] args) {
-    int[] numbers = { 1,2,3,4,5 };
+    Console.Write("[?]Số lượng phần tử: ");
+    int n = Convert.ToInt32(Console.ReadLine());
+    int[] numbers = new int[n];
+
+    for (int i = 0; i < arr.Length; i++) {
+      Console.Write("Arr[{0}]: ", i);
+      numbers[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    
     int total = sum(numbers);
     Console.WriteLine("Tổng giá trị mảng: " + total);
   }

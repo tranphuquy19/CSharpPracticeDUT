@@ -20,7 +20,15 @@ class MainClass {
   }
 
   static void Main(string[] args) {
-    int[] numbers = {34,6,12,6,12,6};
+    Console.Write("[?]Số lượng phần tử: ");
+    int n = Convert.ToInt32(Console.ReadLine());
+    int[] numbers = new int[n];
+
+    for (int i = 0; i < arr.Length; i++) {
+      Console.Write("Arr[{0}]: ", i);
+      numbers[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    
     insert(18, ref numbers);
     Console.WriteLine("Mảng sau khi chèn : ");
     foreach(int number in numbers) {

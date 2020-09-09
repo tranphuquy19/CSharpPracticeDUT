@@ -13,14 +13,15 @@ class MainClass {
   }
 
   static void Main(string[] args) {
-    int[] numbers = {
-      1,
-      346,
-      123,
-      56,
-      123,
-      436
-    };
+    Console.Write("[?]Số lượng phần tử: ");
+    int n = Convert.ToInt32(Console.ReadLine());
+    int[] numbers = new int[n];
+
+    for (int i = 0; i < arr.Length; i++) {
+      Console.Write("Arr[{0}]: ", i);
+      numbers[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    
     delete(10, ref numbers);
     Console.WriteLine("Mảng sau khi xóa: ");
     foreach(int number in numbers) {

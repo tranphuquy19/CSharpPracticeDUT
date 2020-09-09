@@ -19,7 +19,15 @@ class Program {
   }
 
   static void Main(string[] args) {
-    int[] numbers = {1, 5, 3, 10, 288, 54, 17, 39, 117, 401};
+    Console.Write("[?]Số lượng phần tử: ");
+    int n = Convert.ToInt32(Console.ReadLine());
+    int[] numbers = new int[n];
+
+    for (int i = 0; i < arr.Length; i++) {
+      Console.Write("Arr[{0}]: ", i);
+      numbers[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    
     int number = numbers[8];
     Console.WriteLine("So " + number + (isPrime(number) ? " ": " không phải") + " là số nguyên tố!");
     showPrimes(number, numbers);

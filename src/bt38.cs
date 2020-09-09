@@ -28,7 +28,15 @@ class Program {
   }
 
   static void Main(string[] args) {
-    int[] numbers = {1,46,12,651,2,125,12,2,12,1};
+    Console.Write("[?]Số lượng phần tử: ");
+    int n = Convert.ToInt32(Console.ReadLine());
+    int[] numbers = new int[n];
+
+    for (int i = 0; i < arr.Length; i++) {
+      Console.Write("Arr[{0}]: ", i);
+      numbers[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    
     int largestNumber = findLargestNumber(numbers);
     Console.WriteLine("Số xuất hiện nhiều nhất trong dãy là: " + largestNumber);
   }
