@@ -13,7 +13,7 @@ class Program {
     }
   }
 
-  static void Main(string[] args) {
+  public static void Main(string[] args) {
     Console.Write("[?]Số lượng phần tử: ");
     int n = Convert.ToInt32(Console.ReadLine());
     int[] numbers = new int[n];
@@ -28,6 +28,7 @@ class Program {
     foreach(int number in numbers) {
       Console.Write(number + " ");
     }
-  }
 
+    Console.ReadKey();
+  }
 }

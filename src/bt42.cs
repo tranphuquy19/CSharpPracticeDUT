@@ -1,7 +1,7 @@
 using System;
 
 class Program {
-  static void Main(string[] args) {
+  public static void Main(string[] args) {
     Console.Wrilte("[?]Số lượng phần tử: ");
     int length = Convert.ToInt32(Convert.ReadLine());
     int[] numbers = new int[length];
@@ -14,5 +14,7 @@ class Program {
     foreach(int number in numbers) {
       Console.Wrilte(number + " ");
     }
+
+    Console.ReadKey();
   }
 }

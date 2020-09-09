@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 class MainClass {
-  private static void delete(int number, ref int[] numbers) {
+  public static void delete(int number, ref int[] numbers) {
     List < int > array = new List < int > ();
     foreach(int x in numbers) {
       if (x != number) {
@@ -12,7 +12,7 @@ class MainClass {
     numbers = array.ToArray();
   }
 
-  static void Main(string[] args) {
+  public static void Main(string[] args) {
     Console.Write("[?]Số lượng phần tử: ");
     int n = Convert.ToInt32(Console.ReadLine());
     int[] numbers = new int[n];

@@ -1,7 +1,7 @@
 using System;
 
 class Program {
-  private static bool isSymmetry(int[] numbers) {
+  public static bool isSymmetry(int[] numbers) {
     for (int i = 0; i < numbers.Length / 2; i++) {
       if (numbers[i] != numbers[numbers.Length - i - 1]) return false;
     }
@@ -9,7 +9,7 @@ class Program {
     return true;
   }
 
-  static void Main(string[] args) {
+  public static void Main(string[] args) {
     Console.Write("[?]Số lượng phần tử: ");
     int n = Convert.ToInt32(Console.ReadLine());
     int[] numbers = new int[n];
@@ -19,6 +19,8 @@ class Program {
       numbers[i] = Convert.ToInt32(Console.ReadLine());
     }
     
-    Console.WriteLine("Mảng trên " + (isSymmetry(numbers) ? "": "không phải ") + "là mảng đối xứng");
+    string result = (isSymmetry(numbers) ? "": "không phải ";
+
+    Console.WriteLine("Mảng trên {0}là mảng đối xứng", result);
   }
 }

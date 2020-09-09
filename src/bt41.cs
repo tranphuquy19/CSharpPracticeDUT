@@ -1,14 +1,15 @@
 using System;
 
 class Program {
-  private static int sum(int[] numbers) {
+  public static int sum(int[] numbers) {
     int total = 0;
     foreach(int number in numbers) {
       total += number;
     }
     return total;
   }
-  static void Main(string[] args) {
+
+  public static void Main(string[] args) {
     Console.Write("[?]Số lượng phần tử: ");
     int n = Convert.ToInt32(Console.ReadLine());
     int[] numbers = new int[n];
@@ -19,6 +20,8 @@ class Program {
     }
     
     int total = sum(numbers);
-    Console.WriteLine("Tổng giá trị mảng: " + total);
+    Console.WriteLine("Tổng giá trị mảng: {0}", total);
+
+    Console.ReadKey();
   }
 }

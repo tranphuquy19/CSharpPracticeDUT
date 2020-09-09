@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 class Program {
-  private static int findLargestNumber(int[] numbers) {
+  public static int findLargestNumber(int[] numbers) {
     List < int > arr = new List < int > ();
     List < int > counts = new List < int > ();
 
@@ -27,7 +27,7 @@ class Program {
     return arr[maxIndex];
   }
 
-  static void Main(string[] args) {
+  public static void Main(string[] args) {
     Console.Write("[?]Số lượng phần tử: ");
     int n = Convert.ToInt32(Console.ReadLine());
     int[] numbers = new int[n];

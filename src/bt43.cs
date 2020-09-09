@@ -1,8 +1,7 @@
 using System;
 
 class Program {
-
-  private static int getSum(int[] numbers) {
+  public static int getSum(int[] numbers) {
     int sum = 0;
     foreach(int number in numbers) {
       sum += number;
@@ -11,7 +10,7 @@ class Program {
     return sum;
   }
 
-  private static int[] input() {
+  public static int[] input() {
     Console.Write("[?]Số lượng phần tử: ");
     int length = Convert.ToInt32(Console.ReadLine());
     int[] numbers = new int[length];
@@ -22,9 +21,10 @@ class Program {
 
     return numbers;
   }
-  static void Main(string[] args) {
+
+  public static void Main(string[] args) {
     int[] numbers = input();
     int sum = getSum(numbers);
-    Console.Write("Tổng giá trị của mảng: " + sum);
+    Console.Write("Tổng giá trị của mảng: {0}", sum);
   }
 }

@@ -1,7 +1,7 @@
 using System;
 
 class MainClass {
-  private static void insert(int number, int index, ref int[] numbers) {
+  public static void insert(int number, int index, ref int[] numbers) {
     int[] array = new int[numbers.Length + 1];
     for(int i = 0; i < index; i++)
     {

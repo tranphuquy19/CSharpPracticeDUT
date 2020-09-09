@@ -1,7 +1,7 @@
 using System;
 
 class Program {
-  private static void showPrimes(int number, int[] numbers) {
+  public static void showPrimes(int number, int[] numbers) {
     Console.WriteLine("Những số nguyên tố trong dãy nhỏ hơn " + number + " là:");
     foreach(int x in numbers) {
       if (x < number && isPrime(x)) {
@@ -18,7 +18,7 @@ class Program {
     return true;
   }
 
-  static void Main(string[] args) {
+  public static void Main(string[] args) {
     Console.Write("[?]Số lượng phần tử: ");
     int n = Convert.ToInt32(Console.ReadLine());
     int[] numbers = new int[n];
@@ -27,9 +27,13 @@ class Program {
       Console.Write("Arr[{0}]: ", i);
       numbers[i] = Convert.ToInt32(Console.ReadLine());
     }
+
+    Console.Write("[?]Index: ");
+    int index = Convert.ToInt32(Console.ReadLine());
     
-    int number = numbers[8];
-    Console.WriteLine("So " + number + (isPrime(number) ? " ": " không phải") + " là số nguyên tố!");
+    int number = numbers[index];
+    string result = isPrime(number) ? " ": " không phải";
+    Console.WriteLine("Vị trí {0} = {1} {2}là số nguyên tố!", index, number, result);
     showPrimes(number, numbers);
   }
 }

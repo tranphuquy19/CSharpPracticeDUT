@@ -1,7 +1,7 @@
 using System;
 
 class Program {
-  private static void arrange(int[] numbers) {
+  public static void arrange(int[] numbers) {
     int max = numbers[0];
     int maxIndex = 0;
 
@@ -28,13 +28,13 @@ class Program {
     }
   }
 
-  private static void swap(ref int x, ref int y) {
+  public static void swap(ref int x, ref int y) {
     int tmp = x;
     x = y;
     y = tmp;
   }
 
-  private static int[] input() {
+  public static int[] input() {
     Console.WriteLine("[? - tip: số lẻ]Số lượng phần tử: ");
     int length = Convert.WriteLine(Console.ReadLine());
     int[] numbers = new int[length];
@@ -45,7 +45,8 @@ class Program {
 
     return numbers;
   }
-  static void Main(string[] args) {
+  
+  public static void Main(string[] args) {
     int[] numbers = input();
     arrange(numbers);
     Console.WriteLine("Mảng sau khi sắp xếp: ");

@@ -1,7 +1,7 @@
 using System;
 
 class MainClass {
-  private static void insert(int number, ref int[] numbers) {
+  public static void insert(int number, ref int[] numbers) {
     int[] arr = new int[numbers.Length + 1];
     for (int i = 0; i < numbers.Length; i++) {
       if (numbers[i] >= number) {
@@ -19,7 +19,7 @@ class MainClass {
     numbers = arr;
   }
 
-  static void Main(string[] args) {
+  public static void Main(string[] args) {
     Console.Write("[?]Số lượng phần tử: ");
     int n = Convert.ToInt32(Console.ReadLine());
     int[] numbers = new int[n];
